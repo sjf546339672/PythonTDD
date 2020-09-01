@@ -1,11 +1,13 @@
 # coding: utf-8
-import time
-
-from selenium import webdriver
 import unittest
+from selenium import webdriver
+
+# brower = webdriver.Chrome()
+# brower.get("http://localhost:8000")
+# assert "Django" in brower.title
 
 
-class NewTest(unittest.TestCase):
+class NewVistorTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.brower = webdriver.Chrome()
@@ -14,9 +16,10 @@ class NewTest(unittest.TestCase):
     def tearDown(self) -> None:
         self.brower.quit()
 
-    def test_can_start_a_list_and_retrieve_it_later(self):
-        self.brower.get("http://127.0.0.1:9006/home/")
-        time.sleep(10)
+    def test_can_start_a_llist_and_retrieve_it_later(self):
+        self.brower.get("http://localhost:8000")
+        self.assertIn("To-Do", self.brower.title)
+        self.fail("Finish the test!")
 
 
 if __name__ == '__main__':
