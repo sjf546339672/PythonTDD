@@ -8,4 +8,13 @@
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />
   </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$" />
+        <option value="$MODULE_DIR$/superlists" />
+        <option value="$MODULE_DIR$/superlists/templates" />
+      </list>
+    </option>
+  </component>
 </module>
