@@ -93,11 +93,6 @@ pyhon2中才分新式类与经典类
 可hash的类型可以作为字典的key
 """
 
-
-
-
-
-
 """
 Mysql
 第一张表 person 人员信息表：
@@ -195,5 +190,20 @@ insert into dept(did,name) values(7,"国际部")  # dept表有个部门7 person�
 """
 
 
-
-
+# def get_server_message(self):
+#     list1 = [1, 2, 54, 23, 45]
+#     # while True:
+#     #     have_change = False
+#     #     for i in range(len(list1)-1):
+#     #         if list1[i] > list1[i+1]:
+#     #             list1[i], list1[i+1] = list1[i+1], list1[i]
+#     #             have_change = False
+#     #     if not have_change:
+#     #         break
+#     # print(list1)
+#     len_list = len(list1)
+#     for i in range(len_list):
+#         for j in range(0, len_list - i - 1):
+#             if list1[j] > list1[j + 1]:
+#                 list1[j], list1[j + 1] = list1[j + 1], list1[j]
+#     print(list1)
