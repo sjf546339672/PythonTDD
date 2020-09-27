@@ -87,10 +87,35 @@ pyhon2中才分新式类与经典类
 
 问题链接：https://www.cnblogs.com/ajaxa/p/9049518.html
 
-5、可以做字典key的类型有哪些？
+TODO: 5、可以做字典key的类型有哪些？
 不可变类型是可hash # tuple str freezeset
 可变类型是不可hash # list set
 可hash的类型可以作为字典的key
+
+
+TODO: 6、list2 = [1, 2, [3, [4, [5, [6], 7], 8], 9], 10, [11, 12, 13]]如何去除嵌套？
+def relieve_nest(list2):
+    alist = []
+    count = 0
+    for sublist in list2:
+        try:
+            for i in sublist:
+                alist.append(i)
+        except TypeError:
+            alist.append(sublist)
+
+    for j in alist:
+        if type(j) == type([]):
+            count += 1
+            break
+
+    if count == 1:
+        return relieve_nest(alist)
+
+    if count == 0:
+        return alist
+
+
 """
 
 """
@@ -176,17 +201,6 @@ insert into dept(did,name) values(7,"国际部")  # dept表有个部门7 person�
 
 
 # 查询姓“李”的个数
-
-
-
-
-
-
-
-
-
-
-
 """
 
 
@@ -201,9 +215,34 @@ insert into dept(did,name) values(7,"国际部")  # dept表有个部门7 person�
 #     #     if not have_change:
 #     #         break
 #     # print(list1)
+
 #     len_list = len(list1)
 #     for i in range(len_list):
 #         for j in range(0, len_list - i - 1):
 #             if list1[j] > list1[j + 1]:
 #                 list1[j], list1[j + 1] = list1[j + 1], list1[j]
 #     print(list1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
